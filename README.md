@@ -1,198 +1,77 @@
-# Week 8 Submission - React Fundamentals
+# Week 8: React Fundamentals - CommunityHub
 
-**Student Name:** Ndungu Kamande  
-**GitHub Repository:** https://github.com/theecolboy/week-8-repository.git  
-**Live Demo:** http://localhost:5173  
+## Author
+- **Name:** Ndungu Kamande
+- **GitHub:** [@theecolboy](https://github.com/theecolboy)
+- **Date:** May 4, 2026
 
----
+## Project Description
+Built a React application demonstrating core React concepts including component composition, props, state management with useState, list rendering with map(), and creating reusable UI components. The app displays a community hub with blog posts and interactive elements.
 
-## 📋 Assignment Checklist
+## Technologies Used
+- React 18
+- Vite (build tool)
+- JavaScript (ES6+)
+- CSS3 (with CSS variables, Flexbox, Grid)
+- Git & GitHub
 
-✅ Component Composition (Layout pattern)  
-✅ Props implementation (PostCard)  
-✅ Lists + Array Mapping (PostList)  
-✅ useState Hook (Counter component)  
-✅ Reusable Button Component (variants & sizes)  
-✅ Professional CSS Styling  
-✅ Project pushed to GitHub  
+## Features
+- **Header Component** - Navigation bar with site branding
+- **Footer Component** - Site footer with copyright
+- **Layout Component** - Composition pattern using children prop
+- **PostCard Component** - Displays individual post with props
+- **PostList Component** - Renders array of posts using map()
+- **Button Component** - Reusable button with variant (primary/secondary) and size (small/medium/large) options
+- **Counter Demo** - Interactive counter demonstrating useState hook
+- **Responsive Design** - Works on mobile and desktop
+- **Dark Mode Support** - Automatic theme switching
 
----
+## How to Run
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/theecolboy/week-8-repository.git
+   cd week-8-repository
+   ```
 
-## 🏗️ Project Structure
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```
-src/
-├── components/
-│   ├── Header.jsx          # Navigation bar
-│   ├── Footer.jsx          # Site footer
-│   ├── Layout.jsx          # Composition wrapper (children prop)
-│   ├── PostCard.jsx        # Individual post with props
-│   ├── PostList.jsx        # Posts array + map() rendering
-│   └── Button.jsx          # Reusable button component
-├── App.jsx                 # Main app with Counter & Button demos
-├── main.jsx               # Entry point
-└── index.css              # Complete styling
-```
+3. Start development server:
+   ```bash
+   npm run dev
+   ```
 
----
+4. Open browser to: http://localhost:5173
 
-## 🎯 Key Concepts Demonstrated
+OR simply open `index.html` in your browser (limited functionality without build)
 
-### 1. JSX
-```jsx
-function Header() {
-  return (
-    <header className="header">
-      <h1>CommunityHub</h1>
-    </header>
-  );
-}
-```
+## Lessons Learned
+- React components are reusable building blocks that can be composed together
+- Props allow data to flow from parent to child components unidirectionally
+- The useState hook is essential for managing local component state
+- Component composition using the children prop creates flexible layouts
+- CSS variables make theming and dark mode implementation cleaner
+- Key props are crucial when rendering lists for React's reconciliation
 
-### 2. Components
-- **Function Components** - All 6 components are functional
-- **Single Responsibility** - Each component does one thing well
+## Challenges Faced
+- **Initial Setup:** Understanding Vite's project structure vs Create React App - solved by reading Vite documentation
+- **Component Architecture:** Deciding between composition vs inheritance - chose composition for better flexibility
+- **CSS Organization:** Managing styles across multiple components - used CSS variables and organized by component
+- **Button Props:** Handling optional parameters with default values - used ES6 default parameters
 
-### 3. Props (Data Passing)
-```jsx
-<PostCard
-  key={post.id}
-  title={post.title}
-  excerpt={post.excerpt}
-  author={post.author}
-  date={post.date}
-/>
-```
+## Screenshots
+![Main Application View](screenshots/main-view.png)
+![Post Cards](screenshots/post-cards.png)
+![Button Variants](screenshots/buttons.png)
 
-### 4. Lists & Mapping
-```jsx
-{posts.map((post) => (
-  <PostCard key={post.id} {...post} />
-))}
-```
-
-### 5. Composition (Layout Pattern)
-```jsx
-function Layout({ children }) {
-  return (
-    <div>
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </div>
-  );
-}
-```
-
-### 6. useState Hook
-```jsx
-const [count, setCount] = useState(0);
-<button onClick={() => setCount(count + 1)}>
-  Count: {count}
-</button>
-```
-
-### 7. Reusable Button with Defaults
-```jsx
-<Button
-  text="Primary"
-  variant="primary"
-  size="medium"
-/>
-```
+## Live Demo
+Project is running locally at http://localhost:5173
 
 ---
 
-## 🚀 Running the Application
-
-```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Visit
-http://localhost:5173
-```
-
----
-
-## 📸 Features Showcase
-
-### Header
-- Site branding + navigation
-- Responsive flexbox layout
-
-### Footer
-- Copyright information
-- Sticky bottom placement
-
-### PostCard
-- Card-based design with hover effects
-- Displays title, excerpt, author, date
-- Shadow & border styling
-
-### PostList
-- Grid layout for cards
-- Dynamic rendering from array
-- Key prop for React optimization
-
-### Button Component
-- 2 variants: `primary`, `secondary`
-- 3 sizes: `small`, `medium`, `large`
-- onClick support
-- Hover animations
-
-### Counter Demo
-- useState implementation
-- Increment functionality
-- Interactive button
-
----
-
-## 🎨 Styling Highlights
-
-- **CSS Variables** for theming
-- **Dark mode** support (automatic)
-- **Responsive** design (mobile-friendly)
-- **Hover effects** on cards & buttons
-- **Grid layout** for post list
-- **Modern** spacing & typography
-
----
-
-## 📦 Technologies Used
-
-| Tool | Purpose |
-|------|---------|
-| React 18 | UI Library |
-| Vite | Build Tool |
-| CSS | Styling |
-| Git | Version Control |
-
----
-
-## ✅ Submission Confirmation
-
-- [x] Code follows React best practices
-- [x] Components are reusable and modular
-- [x] Props used correctly
-- [x] useState implemented
-- [x] Clean, professional styling
-- [x] Committed with meaningful message
-- [x] Pushed to GitHub repository
-
----
-
-## 🔜 Next Steps (Week 9 Prep)
-
-- Add routing with React Router
-- Create Post form (form handling)
-- Like button functionality
-- Delete post feature
-- Connect to backend API
-
----
-
-**Project completed and submitted for Week 8 - React Fundamentals**
+## Repository Info
+**Repository URL:** https://github.com/theecolboy/week-8-repository.git  
+**Branch:** main  
+**Status:** ✅ Ready for submission
